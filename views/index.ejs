@@ -1,0 +1,41 @@
+<!-- views/index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoodStrum</title>
+    <link href="/css/styles.css" rel="stylesheet">
+</head>
+
+<body class="bg-gradient-to-r from-slate-300 to-slate-500">
+    <div class="container mx-auto py-8">
+        <h1 class="text-3xl font-semibold mb-4">Welcome to MoodStrum</h1>
+        <section>
+            <h2 class="text-2xl font-semibold mb-2">Happy Songs</h2>
+        </section>
+        <section>
+            <h2 class="text-2xl font-semibold mb-2">Sad Songs</h2>
+        </section>
+        <button id="openCameraBtn"
+            class="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-4 py-2 rounded shadow mt-8">Detect
+            Mood</button>
+        <div id="webcamModal"
+            class="fixed top-0 left-0 flex items-center justify-center w-full h-full bg-gray-800 bg-opacity-50 hidden">
+            <div class="bg-white p-8 rounded shadow-lg">
+                <h2 class="text-2xl font-semibold mb-4">Mood Detection</h2>
+                <video id="webcamPreview" class="w-full h-auto mb-4" autoplay muted></video>
+                <div class="flex justify-between">
+                    <button id="goBtn"
+                        class="bg-green-500 hover:bg-green-600 text-white font-semibold px-4 py-2 rounded">Go</button>
+                    <button id="closeBtn"
+                        class="bg-red-500 hover:bg-red-600 text-white font-semibold px-4 py-2 rounded">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/scripts.js"></script>
+</body>
+
+</html>
